@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Profiles</title>
+</head>
+
+<body>
+    <H1>All registered Users</H1>
+    <ul>
+        <%for(let i of user_list){%>
+            <li>
+                <div>
+                    <%=i.name%>
+                        <br>
+                        <%=i.phone%>
+                            <br>
+                            <%=i.email%>
+                                <br>
+                </div>
+                <div>
+                    <a href="/delete-user/?id=<%=i._id%>">
+                        <button>delete user</button>
+                    </a>
+                </div>
+            </li>
+            <%}%>
+    </ul>
+    <h3><a href='/'> Back to Home page</a></h3>
+    <h3><a href='/registration'>User Registration </a></h3>
+
+
+
+
+
+
+</body>
+
+</html>
